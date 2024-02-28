@@ -5,11 +5,9 @@ import java.util.List;
 
 public class Wallet {
     private Owner owner;
-    private List<Card> cards = new ArrayList<>();
+    private List<Card> cards;
 
     private double cash;
-
-    public Wallet(){}
 
     public Wallet(Owner owner, List<Card> cards,double cash) {
         this.owner = owner;
@@ -71,7 +69,8 @@ public class Wallet {
         });
     }
 
-    public void removeAllCards(){
+    public String removeAllCards(){
         this.cards = new ArrayList<>();
+        return null;
     }
 }

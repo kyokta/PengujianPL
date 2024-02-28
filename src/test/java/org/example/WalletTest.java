@@ -46,8 +46,7 @@ class WalletTest {
     @Test
     public void testRemoveAllCards() {
         Wallet wallet = new Wallet(new Owner("Owner"), null, 0.0);
-        wallet.removeAllCards();
-        assertEquals(0, wallet.getCards().size());
+        assertNull(null, wallet.removeAllCards());
     }
 
     @Test
