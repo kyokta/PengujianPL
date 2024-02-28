@@ -29,10 +29,6 @@ public class Wallet {
         return cards;
     }
 
-    public void setCards(List<Card> cards) {
-        this.cards = cards;
-    }
-
     public double getCash() {
         return cash;
     }
@@ -47,7 +43,7 @@ public class Wallet {
             return 0;
         } else {
             this.cash -= amount;
-            return amount;
+            return this.cash;
         }
     }
 
@@ -57,17 +53,25 @@ public class Wallet {
     }
 
     public void addCards(String bank, int accountNumber){
+        if (this.cards == null) {
+            this.cards = new ArrayList<>();
+        }
+
         Card card = new Card();
         card.setNamaPemilik(this.owner.getNama());
         card.setBank(bank);
         card.setNoRek(String.valueOf(accountNumber));
-        this.cards.add(new Card());
+        this.cards.add(card);
     }
 
     public void removeCard(int accountNumber){
-        this.cards.forEach(card -> {
-            if (card.getNoRek().equals(String.valueOf(accountNumber)))
-                this.cards.remove(card);
+        this.cards.removeIf(card -> {
+            String cardNumber = card.getNoRek();
+            return cardNumber != null && cardNumber.equals(String.valueOf(accountNumber));
         });
+    }
+
+    public void removeAllCards(){
+        this.cards = new ArrayList<>();
     }
 }

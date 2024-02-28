@@ -11,16 +11,8 @@ public class Card {
     public Card() {
     }
 
-    public String getBank() {
-        return bank;
-    }
-
     public void setBank(String bank) {
         this.bank = bank;
-    }
-
-    public String getNamaPemilik() {
-        return namaPemilik;
     }
 
     public void setNamaPemilik(String namaPemilik) {
@@ -33,13 +25,5 @@ public class Card {
 
     public void setNoRek(String noRek) {
         this.noRek = noRek;
-    }
-
-    public LocalDate getMasaAkrif() {
-        return masaAkrif;
-    }
-
-    public void setMasaAkrif(LocalDate masaAkrif) {
-        this.masaAkrif = masaAkrif;
     }
 }
