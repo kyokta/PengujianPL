@@ -6,7 +6,6 @@ import java.util.List;
 public class Wallet {
     private Owner owner;
     private List<Card> cards;
-
     private double cash;
 
     public Wallet(Owner owner, List<Card> cards,double cash) {
@@ -15,25 +14,15 @@ public class Wallet {
         this.cash = cash;
     }
 
-    public Owner getOwner() {
-        return owner;
-    }
+    public Owner getOwner() { return owner; }
 
-    public void setOwner(Owner owner) {
-        this.owner = owner;
-    }
+    public void setOwner(Owner owner) { this.owner = owner; }
 
-    public List<Card> getCards() {
-        return cards;
-    }
+    public List<Card> getCards() { return cards; }
 
-    public double getCash() {
-        return cash;
-    }
+    public double getCash() { return cash; }
 
-    public void setCash(Integer cash) {
-        this.cash = cash;
-    }
+    public void setCash(Integer cash) { this.cash = cash; }
 
     public double withdraw(double amount) {
         if (this.cash < amount) {

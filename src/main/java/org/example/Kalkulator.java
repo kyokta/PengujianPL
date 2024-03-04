@@ -15,6 +15,8 @@ public class Kalkulator {
         return getNilai1() + getNilai2();
     }
 
+    public int pengurangan() { return  getNilai1() - getNilai2(); }
+
     public int getNilai2()
     {
         return nilai2;
